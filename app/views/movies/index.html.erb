@@ -1,0 +1,8 @@
+<h2>Viewing Movies</h2>
+<h3>Click a title for details</h3>
+<ul>
+  <% @movies.each do |movie| %>
+    <li><%= link_to movie.title, movie_path(movie) %></a>
+    </li>
+  <% end %>
+</ul>

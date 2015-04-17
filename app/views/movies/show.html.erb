@@ -1,0 +1,15 @@
+<h2> <%= @movie.title %> </h2>
+<h3>Release Year: <strong><%= @movie.year %></strong></h3>
+<div class= "poster"> <img src="<%= @movie.poster_url %>" height="330" width="225"</img> </div>
+<h2>Summary:</h2>
+ <div class="summary"><%= @movie.plot %></div>
+
+<h2>Actors:</h2>
+
+<ul>
+<% @actors.each do |actor| %>
+    <li><img class"actor" src="<%= actor.photo_url %>" height="110" width="260"</img></li>
+    <li><span class="name"> <%= actor.name %></span></li>
+  <% end %>
+</ul>
+
